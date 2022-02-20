@@ -16,16 +16,3 @@ export const getUserHistory = () => {
 export const setUserHistory = (value) => {
     setLSField(USER_HISTORY_FIELD, value)
 }
-
-// export const getIsUserAgreementSigned = () => getFromLS(USER_AGREEMENT_FIELD)
-// export const getIsUserTestFinished = () => getFromLS(USER_TEST_FINISHED_FIELD)
-// export const getIsUserEmailProvided = () => getFromLS(USER_EMAIL_PROVIDED)
-
-// export const setIsUserAgreementSigned = (value) => 
-//     setLSField(USER_AGREEMENT_FIELD, value)
-
-// export const setIsUserTestFinished = (value) =>
-//     setLSField(USER_TEST_FINISHED_FIELD, value)
-
-// export const setIsUserEmailProvided = (value) =>
-//     setLSField(USER_EMAIL_PROVIDED, value)
