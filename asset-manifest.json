@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sciency_stuff/static/css/main.d75aafb1.css",
+    "main.js": "/sciency_stuff/static/js/main.3ee06985.js",
+    "index.html": "/sciency_stuff/index.html",
+    "main.d75aafb1.css.map": "/sciency_stuff/static/css/main.d75aafb1.css.map",
+    "main.3ee06985.js.map": "/sciency_stuff/static/js/main.3ee06985.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d75aafb1.css",
+    "static/js/main.3ee06985.js"
+  ]
+}
