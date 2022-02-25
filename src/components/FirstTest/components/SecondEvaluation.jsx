@@ -20,7 +20,8 @@ const getRandomPairs = () => {
 }
 
 const SecondEvaluation = ({
-    handleFinished
+    handleFinished,
+    testResults,
 }) => {
     //TODO: обработка данных второй формы (массив userSelected)
     const [testPairs] = useState(getRandomPairs)
@@ -38,7 +39,8 @@ const SecondEvaluation = ({
 
     const handleNextClick = () => {
         if (currentPairIndex === testPairs.length - 1) {
-            console.log(userSelected)
+            testResults.secondTestPairs = testPairs
+            testResults.secondTestResults = userSelected
             handleFinished()
         }
         setCurrentPair(testPairs[currentPairIndex + 1])

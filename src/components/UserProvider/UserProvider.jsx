@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
+import { Loader } from "rsuite"
 import { getUserHistory, setUserHistory } from "../../utils"
+import { sendResultsToDB } from "../../utils"
 import Agreement from "../Agreement"
 import Email from "../Email"
 import FirstTest from "../FirstTest"
@@ -12,12 +14,22 @@ const UserProvider = () => {
     const [isSigned, setIsSigned] = useState(isAgreementSigned)
     const [isEmail, setIsEmail] = useState(isEmailProvided)
     const [isFinished, setIsFinished] = useState(isTestFinished)
+    const [isPending, setIsPending] = useState(false)
+    const [testResults] = useState({})
 
-    const handleSigned = () => setIsSigned(true)
+    const handleSigned = () => {
+        setIsSigned(true)
+    }
 
     const handleEmail = () => setIsEmail(true)
 
-    const handleFinished = () => setIsFinished(true)
+    const handleFinished = () => {
+        sendResultsToDB(
+            { data: JSON.stringify(testResults) },
+            setIsPending,
+            setIsFinished
+        )
+    }
 
     const updateHistory = () => {
         setUserHistory({
@@ -31,6 +43,8 @@ const UserProvider = () => {
         updateHistory()
     }, [isSigned, isEmail, isFinished])
 
+    if (isPending) return <Loader size="lg" backdrop center content="Отправка данных" />
+
     if (!isSigned) return <Agreement handleSigned={handleSigned} />
 
     if (isFinished) return (
@@ -40,7 +54,7 @@ const UserProvider = () => {
         />
     )
 
-    return <FirstTest handleFinished={handleFinished} />
+    return <FirstTest handleFinished={handleFinished} testResults={testResults}/>
 }
 
 export default UserProvider

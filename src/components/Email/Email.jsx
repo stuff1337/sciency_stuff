@@ -1,10 +1,12 @@
 import { Field, Form, Formik } from "formik"
-import { values } from "lodash"
+import { useState } from "react"
 import {
     Panel,
     Button,
     Divider,
+    Loader
 } from "rsuite"
+import { sendEmailToDB } from "../../utils"
 import styles from './Email.module.scss'
 
 const Email = ({
@@ -12,15 +14,17 @@ const Email = ({
     isEmail
 }) => {
 
+    const [isPending, setIsPending] = useState(false)
+
     const initialFormValues = {
         email: ''
     }
 
-    const handleSubmit = (values) => {
-        //TODO: обработка отправки мыла
-        console.log(values)
-        handleEmail()
+    const handleSubmit = (value) => {
+        sendEmailToDB(value, setIsPending, handleEmail)        
     }
+
+    if (isPending) return <Loader size="lg" backdrop center content="Отправка данных" />
 
     return (
         <div className={styles.content}>

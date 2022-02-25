@@ -6,7 +6,8 @@ import FirstEvaluation from "./components/FirstEvaluation"
 import Rules from './components/Rules'
 
 const FirstTest = ({
-    handleFinished
+    handleFinished,
+    testResults,
 }) => {
     //да, я знаю. Но вермишелиться с роутингами было бы ещё более странным решением в таких масштабах
     //сорри
@@ -46,16 +47,22 @@ const FirstTest = ({
     }
 
     const handleSubmit = ({ words }) => {
-        //TODO: обработка данных первой формы\
+        //TODO: обработка данных первой формы
         const filteredValues = words.filter(el => el.word !== '')
-        console.log(filteredValues)
+        // console.log(filteredValues)
+        testResults.firstTestResults = filteredValues
         setIsFirstEvaluationCompleted(true)
     }
 
     if (!isStarted) return <Rules handleStarted={handleStarted}/>
 
     if (isFirstEvaluationCompleted) {
-        return <SecondEvaluation handleFinished={handleFinished}/>
+        return (
+            <SecondEvaluation 
+                testResults={testResults}
+                handleFinished={handleFinished}
+            />
+        )
     }
 
     return (
