@@ -51,15 +51,3 @@ export const sendEmailToDB = async(email, setIsPending, handleEmail) => {
         setIsPending(false)
     }
 }
-
-// export const getResultsFromDB = async() => {
-//     try {
-//         const querySnapshot = await getDocs(collection(database, "respondents"));
-//         console.log(querySnapshot)
-//         querySnapshot.forEach((doc) => {
-//             console.log(doc.data());
-//           })
-//     } catch (e) {
-//         console.error(e);
-//     }  
-// }
