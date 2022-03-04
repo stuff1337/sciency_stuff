@@ -47,9 +47,7 @@ const FirstTest = ({
     }
 
     const handleSubmit = ({ words }) => {
-        //TODO: обработка данных первой формы
         const filteredValues = words.filter(el => el.word !== '')
-        // console.log(filteredValues)
         testResults.firstTestResults = filteredValues
         setIsFirstEvaluationCompleted(true)
     }

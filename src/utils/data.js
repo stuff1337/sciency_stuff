@@ -1,175 +1,53 @@
 export const RELEVANT_STIMULAE = [
-    {text: 'сензиб', isAnagram: true, isRelevant: true},
-    {text: 'консыв', isAnagram: false, isRelevant: true},
-    {text: 'зуфнок', isAnagram: true, isRelevant: true},
-    {text: 'рескав', isAnagram: false, isRelevant: true},
-    {text: 'мютсок', isAnagram: true, isRelevant: true},
-    {text: 'сивкоб', isAnagram: false, isRelevant: true},
-    {text: 'рикнаб', isAnagram: true, isRelevant: true},
-    {text: 'путрес', isAnagram: false, isRelevant: true},
-    {text: 'ретсам', isAnagram: true, isRelevant: true},
-    {text: 'ротсеч', isAnagram: false, isRelevant: true},
+    {text: 'Доран', isAnagram: true, isRelevant: true },
+    {text: 'Голур', isAnagram: false, isRelevant: true },
+    {text: 'Цясем', isAnagram: true, isRelevant: true },
+    {text: 'Йизеп', isAnagram: false, isRelevant: true },
+    {text: 'Тевос', isAnagram: true, isRelevant: true },
+    {text: 'Ройан', isAnagram: false, isRelevant: true },
+    {text: 'Целап', isAnagram: true, isRelevant: true },
+    {text: 'Гопюр', isAnagram: false, isRelevant: true },
+    {text: 'Телоп', isAnagram: true, isRelevant: true },
+    {text: 'Редиб', isAnagram: false, isRelevant: true },
+    {text: 'Йорег', isAnagram: true, isRelevant: true },
+    {text: 'Товил', isAnagram: false, isRelevant: true },
+    {text: 'Доваз', isAnagram: true, isRelevant: true },
+    {text: 'Межат', isAnagram: false, isRelevant: true },
+    {text: 'Дохыв', isAnagram: true, isRelevant: true },
+    {text: 'Тулаж', isAnagram: false, isRelevant: true },
+    {text: 'Кижум', isAnagram: true, isRelevant: true },
+    {text: 'Жебас', isAnagram: false, isRelevant: true },
+    {text: 'Равот', isAnagram: true, isRelevant: true },
+    {text: 'Когас', isAnagram: false, isRelevant: true },
+    {text: 'Сурив', isAnagram: true, isRelevant: true },
+    {text: 'Добаг', isAnagram: false, isRelevant: true },
+    {text: 'Кошем', isAnagram: true, isRelevant: true },
+    {text: 'Тежум', isAnagram: false, isRelevant: true },
 ]
 
 export const DISTRACTIONS = [
-    {
-        text: 'зибкав',
-        isRelevant: false
-    },
-    {
-        text: 'зиброт',
-        isRelevant: false
-    },
-    {
-        text: 'зуфрес',
-        isRelevant: false
-    },
-    {
-        text: 'зуфсок',
-        isRelevant: false
-    },
-    {
-        text: 'кавмют',
-        isRelevant: false
-    },
-    {
-        text: 'кавпут',
-        isRelevant: false
-    },
-    {
-        text: 'кобсам',
-        isRelevant: false
-    },
-    {
-        text: 'кобсен',
-        isRelevant: false
-    },
-    {
-        text: 'конрес',
-        isRelevant: false
-    },
-    {
-        text: 'консам',
-        isRelevant: false
-    },
-    {
-        text: 'мюткоб',
-        isRelevant: false
-    },
-    {
-        text: 'мютрик',
-        isRelevant: false
-    },
-    {
-        text: 'набрес',
-        isRelevant: false
-    },
-    {
-        text: 'наброт',
-        isRelevant: false
-    },
-    {
-        text: 'нокрес',
-        isRelevant: false
-    },
-    {
-        text: 'ноксив',
-        isRelevant: false
-    },
-    {
-        text: 'путсен',
-        isRelevant: false
-    },
-    {
-        text: 'путсок',
-        isRelevant: false
-    },
-    {
-        text: 'рескон',
-        isRelevant: false
-    },
-    {
-        text: 'ресмют',
-        isRelevant: false
-    },
-    {
-        text: 'реснаб',
-        isRelevant: false
-    },
-    {
-        text: 'респут',
-        isRelevant: false
-    },
-    {
-        text: 'ретнок',
-        isRelevant: false
-    },
-    {
-        text: 'ретсыв',
-        isRelevant: false
-    },
-    {
-        text: 'риксеч',
-        isRelevant: false
-    },
-    {
-        text: 'риксив',
-        isRelevant: false
-    },
-    // {
-    //     text: ротзиб,
-    //     isRelevant: false
-    // },
-    // {
-    //     text: ротсеч,
-    //     isRelevant: false
-    // },
-    {
-        text: 'самкон',
-        isRelevant: false
-    },
-    {
-        text: 'самнаб',
-        isRelevant: false
-    },
-    {
-        text: 'сенкав',
-        isRelevant: false
-    },
-    {
-        text: 'сенкоб',
-        isRelevant: false
-    },
-    {
-        text: 'сечзиб',
-        isRelevant: false
-    },
-    {
-        text: 'сечрик',
-        isRelevant: false
-    },
-    {
-        text: 'сивнок',
-        isRelevant: false
-    },
-    {
-        text: 'сивсыв',
-        isRelevant: false
-    },
-    {
-        text: 'сокзуф',
-        isRelevant: false
-    },
-    {
-        text: 'сокрет',
-        isRelevant: false
-    },
-    {
-        text: 'сывзуф',
-        isRelevant: false
-    },
-    {
-        text: 'сыврет',
-        isRelevant: false
-    }
+    {text: 'Зибак', isRelevant: false},
+    {text: 'Зуфос', isRelevant: false},
+    {text: 'Кобес', isRelevant: false}, 
+    {text: 'Набер', isRelevant: false},
+    {text: 'Ресуг', isRelevant: false},
+    {text: 'Сывер', isRelevant: false},
+    {text: 'Кабиз', isRelevant: false},
+    {text: 'Софуз', isRelevant: false},
+    {text: 'Ребан', isRelevant: false},
+    {text: 'Гусер', isRelevant: false},
+    {text: 'Ревыс', isRelevant: false},
+    {text: 'Себок', isRelevant: false},
+    {text: 'Рулог', isRelevant: false},
+    {text: 'Цезий', isRelevant: false},
+    {text: 'Найор', isRelevant: false},
+    {text: 'Рюпог', isRelevant: false},
+    {text: 'Бидер', isRelevant: false},
+    {text: 'Ливот', isRelevant: false},
+    {text: 'Тажем', isRelevant: false},
+    {text: 'Жалут', isRelevant: false},
+    {text: 'Сабеж', isRelevant: false},
+    {text: 'Сагок', isRelevant: false},
+    {text: 'Габод', isRelevant: false},
+    {text: 'Мужет', isRelevant: false},
 ]

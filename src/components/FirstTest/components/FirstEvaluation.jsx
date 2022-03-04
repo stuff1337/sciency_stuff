@@ -23,6 +23,20 @@ const initialFormValues = {
         { word: '', isUserSure: false },
         { word: '', isUserSure: false },
         { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
+        { word: '', isUserSure: false },
     ]
 }
 
@@ -46,23 +60,25 @@ const FirstEvaluation = ({
                         name="words"
                         render={arrayHelpers => {
                             return(
-                                <div>
-                                    {values.words.map((word, index) => (
-                                        <div key={index} className={styles.form__input_group}>
-                                            <Field
-                                                className={styles.form__input_group__input}
-                                                value={word.word}
-                                                name={`words.${index}.word`}
-                                            />
-                                            <Field
-                                                className={styles.form__input_group__checkbox}
-                                                type="checkbox"
-                                                value={word.isUserSure}
-                                                checked={word.isUserSure}
-                                                name={`words.${index}.isUserSure`}
-                                            />
-                                        </div>
-                                    ))}
+                                <>
+                                    <div className={styles.form__grid_container}>
+                                        {values.words.map((word, index) => (
+                                            <div key={index} className={styles.form__input_group}>
+                                                <Field
+                                                    className={styles.form__input_group__input}
+                                                    value={word.word}
+                                                    name={`words.${index}.word`}
+                                                />
+                                                <Field
+                                                    className={styles.form__input_group__checkbox}
+                                                    type="checkbox"
+                                                    value={word.isUserSure}
+                                                    checked={word.isUserSure}
+                                                    name={`words.${index}.isUserSure`}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
                                     <Button
                                         block
                                         appearance="primary"
@@ -70,7 +86,7 @@ const FirstEvaluation = ({
                                     >
                                         Больше не помню
                                     </Button>
-                                </div>
+                                </>
                             )}
                         }
                     />              
